@@ -13,9 +13,6 @@ public class AuthorTable {
     @Column(name = "author_name")
     private String author_name;
 
-//    @OneToOne(mappedBy = "authorTable", cascade = CascadeType.ALL)
-//    private BookTable bookTable;
-
     public AuthorTable() {
 
     }
@@ -31,11 +28,4 @@ public class AuthorTable {
     public void setAuthor_name(String author_name) {
         this.author_name = author_name;
     }
-
-//    public BookTable getBookTable() {
-//        return bookTable;
-//    }
-//    public void setBookTable(BookTable bookTable) {
-//        this.bookTable = bookTable;
-//    }
 }

@@ -9,48 +9,37 @@ public class StudentTable {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long student_id;
 
-    @Column(name = "first_name")
-    private String name;
+    private String login;
 
-    @Column(name = "second_name")
-    private String surname;
+    private int password;
 
-    @Column(name = "groupS")
-    private String groupS;
-
-    @Column(name = "telephone_number")
-    private String telephone_number;
+    private String email;
 
     public StudentTable() {
     }
+
     public Long getStudent_id() {
         return student_id;
     }
     public void setStudent_id(Long student_id) {
         this.student_id = student_id;
     }
-    public String getName() {
-        return name;
+    public String getLogin() {
+        return login;
     }
-    public void setName(String name) {
-        this.name = name;
+    public void setLogin(String login) {
+        this.login = login;
     }
-    public String getSurname() {
-        return surname;
+    public Integer getPassword() {
+        return password;
     }
-    public void setSurname(String surname) {
-        this.surname = surname;
+    public void setPassword(int password) {
+        this.password = password;
     }
-    public String getGroupS() {
-        return groupS;
+    public String getEmail() {
+        return email;
     }
-    public void setGroupS(String groupS) {
-        this.groupS = groupS;
-    }
-    public String getTelephone_number() {
-        return telephone_number;
-    }
-    public void setTelephone_number(String telephone_number) {
-        this.telephone_number = telephone_number;
+    public void setEmail(String email) {
+        this.email = email;
     }
 }

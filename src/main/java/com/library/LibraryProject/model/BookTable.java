@@ -16,9 +16,9 @@ public class BookTable {
     @Column(name = "book_count")
     private int book_count;
 
-//    @OneToOne(cascade = CascadeType.ALL)
-//    @JoinColumn(name = "author_key_id")
-//    private AuthorTable authorTable;/
+    @ManyToOne
+    @JoinColumn(name = "author_id")
+    private AuthorTable author;
 
     public BookTable() {
     }
@@ -40,11 +40,10 @@ public class BookTable {
     public void setBook_count(int book_count) {
         this.book_count = book_count;
     }
-
-//    public AuthorTable getAuthorTable() {
-//        return authorTable;
-//    }
-//    public void setAuthorTable(AuthorTable authorTable) {
-//        this.authorTable = authorTable;
-//    }
+    public AuthorTable getAuthor() {
+        return author;
+    }
+    public void setAuthor(AuthorTable author_id) {
+        this.author = author_id;
+    }
 }
