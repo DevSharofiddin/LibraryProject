@@ -18,13 +18,17 @@ public class StudendController {
     @PostMapping("/student-post")
     public ResponseEntity<?> studentPost(
         @RequestParam(name = "login") String login,
-        @RequestParam(name = "password") int password,
-        @RequestParam(name = "email") String email
+        @RequestParam(name = "password") String password,
+        @RequestParam(name = "email") String email,
+        @RequestParam(name = "role") String role,
+        @RequestParam(name = "status") String status
     ){
         StudentTable studentTable1 = new StudentTable();
         studentTable1.setLogin(login);
         studentTable1.setPassword(password);
         studentTable1.setEmail(email);
+        studentTable1.setRole(role);
+        studentTable1.setStatus(status);
         return ResponseEntity.ok(studentService.save(studentTable1));
     }
 

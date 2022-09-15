@@ -9,11 +9,20 @@ public class StudentTable {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long student_id;
 
+    @Column(name = "login", nullable = false)
     private String login;
 
-    private int password;
+    @Column(name = "password", nullable = false)
+    private String password;
 
+    @Column(name = "email", nullable = false)
     private String email;
+
+    @Column(name = "role", nullable = false)
+    private String role;
+
+    @Column(name = "status", nullable = false)
+    private String status;
 
     public StudentTable() {
     }
@@ -30,10 +39,10 @@ public class StudentTable {
     public void setLogin(String login) {
         this.login = login;
     }
-    public Integer getPassword() {
+    public String getPassword() {
         return password;
     }
-    public void setPassword(int password) {
+    public void setPassword(String password) {
         this.password = password;
     }
     public String getEmail() {
@@ -41,5 +50,17 @@ public class StudentTable {
     }
     public void setEmail(String email) {
         this.email = email;
+    }
+    public String getRole() {
+        return role;
+    }
+    public void setRole(String role) {
+        this.role = role;
+    }
+    public String getStatus() {
+        return status;
+    }
+    public void setStatus(String status) {
+        this.status = status;
     }
 }
